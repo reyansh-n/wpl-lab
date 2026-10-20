@@ -1,1 +1,96 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CityCare Hospital | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">CityCare Hospital</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="catalogue.html">Departments</a></li>
+                <li class="nav-item"><a class="nav-link" href="timetable.html">Timetable</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>Welcome!</strong> Your health and well-being are our priority.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <section class="hero text-center p-5 rounded-4">
+        <img src="https://placehold.co/160x160/ffffff/0d6efd?text=CityCare"
+             class="rounded-circle img-thumbnail mb-3"
+             alt="CityCare Hospital logo">
+        <h1 class="display-5 fw-bold">Welcome to CityCare Hospital</h1>
+        <p class="lead">Compassionate care. Modern treatment. Healthier lives.</p>
+        <a href="catalogue.html" class="btn btn-primary btn-lg">Explore Departments</a>
+        <a href="register.html" class="btn btn-outline-primary btn-lg">Register Now</a>
+    </section>
+
+    <h2 class="text-center mt-5 mb-4">Our Key Departments</h2>
+
+    <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Cardiology</h5>
+                    <p class="card-text">Heart health assessment, consultation and cardiac care.</p>
+                    <a href="catalogue.html" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Pediatrics</h5>
+                    <p class="card-text">Healthcare and medical support for infants and children.</p>
+                    <a href="catalogue.html" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Orthopedics</h5>
+                    <p class="card-text">Consultation for bones, joints and musculoskeletal health.</p>
+                    <a href="catalogue.html" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="mt-4" aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item active"><a class="page-link" href="index.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="catalogue.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="register.html">3</a></li>
+        </ul>
+    </nav>
+</div>
+
+<footer class="bg-primary text-white text-center p-3 mt-5">
+    <p class="mb-0">&copy; 2026 CityCare Hospital Management Portal</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

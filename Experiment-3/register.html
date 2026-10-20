@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register | CityCare Hospital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">CityCare Hospital</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="catalogue.html">Departments</a></li>
+                <li class="nav-item"><a class="nav-link" href="timetable.html">Timetable</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link active" href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="h3 mb-0">Patient Registration</h1>
+                </div>
+
+                <div class="card-body p-4">
+                    <p class="text-muted">Fill in the form below to try the registration demonstration.</p>
+                    <div id="registerMessage" class="alert d-none" role="alert"></div>
+
+                    <form id="registerForm">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="regEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="regEmail" required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone"
+                                       pattern="[0-9]{10}" maxlength="10"
+                                       placeholder="10-digit number" required>
+                                <div class="form-text">Enter a 10-digit phone number.</div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="dob" class="form-label">Date of Birth</label>
+                                <input type="date" class="form-control" id="dob" required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="gender" class="form-label">Gender</label>
+                                <select class="form-select" id="gender" required>
+                                    <option value="">Select an option</option>
+                                    <option>Female</option>
+                                    <option>Male</option>
+                                    <option>Other</option>
+                                    <option>Prefer not to say</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="address" class="form-label">Address</label>
+                                <textarea class="form-control" id="address" rows="3" required></textarea>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="regPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="regPassword"
+                                       minlength="6" required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPassword"
+                                       minlength="6" required>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        I confirm that the information entered is correct.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Register</button>
+                                <button type="reset" class="btn btn-outline-secondary">Clear Form</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <p class="mt-3 mb-0">Already registered? <a href="login.html">Login here</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-primary text-white text-center p-3 mt-5">
+    &copy; 2026 CityCare Hospital Management Portal
+</footer>
+
+<script>
+    const registerForm = document.getElementById("registerForm");
+
+    registerForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const password = document.getElementById("regPassword").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+        const message = document.getElementById("registerMessage");
+
+        if (password !== confirmPassword) {
+            message.textContent = "Passwords do not match. Please try again.";
+            message.className = "alert alert-danger";
+            return;
+        }
+
+        message.textContent = "Demo only: form validation successful. No information has been saved to a database.";
+        message.className = "alert alert-success";
+        registerForm.reset();
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

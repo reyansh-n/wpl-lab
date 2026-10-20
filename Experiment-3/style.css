@@ -1,0 +1,72 @@
+
+body {
+    background-color: #f4f8fc;
+    color: #212529;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+.navbar-brand {
+    letter-spacing: 0.3px;
+}
+
+.navbar .nav-link {
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #dcecff;
+}
+
+.hero {
+    background: linear-gradient(135deg, #e4f1ff, #ffffff);
+    border: 1px solid #d7e8fa;
+}
+
+.hero .img-thumbnail {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12) !important;
+}
+
+.card-header {
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.table {
+    background-color: #ffffff;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 2rem 1rem !important;
+    }
+
+    .hero .display-5 {
+        font-size: 2rem;
+    }
+
+    .hero .btn {
+        margin: 4px;
+    }
+}
