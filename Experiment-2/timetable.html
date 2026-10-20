@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable - CityCare Hospital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CityCare Hospital</h1>
+        <p>Quality Healthcare, Compassionate Care</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="catalogue.html">Doctors &amp; Services</a></li>
+            <li><a href="register.html">Registration</a></li>
+            <li><a href="timetable.html" class="active">Timetable</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="card card-wide">
+            <h2>Class Timetable</h2>
+            <p>Semester V - Class Schedule</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day / Time</th><th>8:30 AM - 9:30 AM</th><th>9:30 AM - 10:30 AM</th>
+                            <th>10:30 AM - 11:30 AM</th><th>11:30 AM - 12:30 PM</th>
+                            <th>12:30 PM - 1:30 PM</th><th>1:30 PM - 3:30 PM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="day-col">Monday</td><td>DBMS</td><td>Computer Networks</td><td>WPL</td>
+                            <td rowspan="5" class="lunch-break">L<br>U<br>N<br>C<br>H</td>
+                            <td>Software Engineering</td><td class="lab">WPL Lab</td>
+                        </tr>
+                        <tr>
+                            <td class="day-col">Tuesday</td><td>Operating Systems</td><td>Mathematics</td><td>DBMS</td>
+                            <td>Computer Networks</td><td class="lab">DBMS Lab</td>
+                        </tr>
+                        <tr>
+                            <td class="day-col">Wednesday</td><td>WPL</td><td>Software Engineering</td><td>Operating Systems</td>
+                            <td>Mathematics</td><td>Computer Networks</td>
+                        </tr>
+                        <tr>
+                            <td class="day-col">Thursday</td><td>Computer Networks</td><td>DBMS</td><td>Mathematics</td>
+                            <td>Operating Systems</td><td class="lab">OS Lab</td>
+                        </tr>
+                        <tr>
+                            <td class="day-col">Friday</td><td>Software Engineering</td><td>WPL</td><td>Operating Systems</td>
+                            <td>DBMS</td><td class="lab">Project Work</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CityCare Hospital. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

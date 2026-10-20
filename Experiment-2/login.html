@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CityCare Hospital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CityCare Hospital</h1>
+        <p>Quality Healthcare, Compassionate Care</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html" class="active">Login</a></li>
+            <li><a href="catalogue.html">Doctors &amp; Services</a></li>
+            <li><a href="register.html">Registration</a></li>
+            <li><a href="timetable.html">Timetable</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="card">
+            <h2>Patient Login</h2>
+            <p style="margin-bottom:1.2rem;">Login to your account</p>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="username">Username / Email:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label>Login As:</label>
+                    <div class="radio-options">
+                        <label for="patient"><input type="radio" id="patient" name="role" value="patient"> Patient</label>
+                        <label for="doctor"><input type="radio" id="doctor" name="role" value="doctor"> Doctor</label>
+                        <label for="admin"><input type="radio" id="admin" name="role" value="admin"> Admin</label>
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <input type="submit" value="Login" class="btn btn-primary">
+                    <input type="reset" value="Clear" class="btn btn-secondary">
+                </div>
+                <p class="form-link">New patient? <a href="register.html">Register here</a></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CityCare Hospital. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
