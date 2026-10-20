@@ -8,10 +8,8 @@ Welcome to my Web Programming Lab (WPL) repository. This repository contains the
 |---|---|---|
 | Experiment 1 | Hospital Management System | [Open Website](https://reyansh-n.github.io/wpl-lab/Experiment-1/) |
 | Experiment 2 | Experiment 2 | [Open Website](https://reyansh-n.github.io/wpl-lab/Experiment-2/) |
+| Experiment 3 | Experiment 3 | [Open Website](https://reyansh-n.github.io/wpl-lab/Experiment-3/) |
 
-## Repository Structure
 
-- `Experiment-1/` — Hospital Management website files
-- `Experiment-2/` — Experiment 2 website files
 
 Each experiment folder contains the HTML files required for its website.
