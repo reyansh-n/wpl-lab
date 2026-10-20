@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - CityCare Hospital</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center;">
+  <header>
+    <h1>CityCare Hospital</h1>
+    <h2>Patient Login</h2>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="login.html">Login</a> |
+    <a href="catalogue.html">Doctors &amp; Services</a> |
+    <a href="register.html">Registration</a> |
+    <a href="timetable.html">Class Timetable</a>
+  </nav>
+  <hr>
+
+  <main>
+    <h2>Login to Your Account</h2>
+    <form action="#" method="post">
+      <p>
+        <label for="username">Username / Email:</label><br>
+        <input type="text" id="username" name="username" required>
+      </p>
+      <p>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required>
+      </p>
+      <p>
+        <label>Login As:</label><br>
+        <input type="radio" id="patient" name="role" value="patient">
+        <label for="patient">Patient</label>
+        <input type="radio" id="doctor" name="role" value="doctor">
+        <label for="doctor">Doctor</label>
+        <input type="radio" id="admin" name="role" value="admin">
+        <label for="admin">Admin</label>
+      </p>
+      <p>
+        <input type="submit" value="Login">
+        <input type="reset" value="Clear">
+      </p>
+    </form>
+
+    <p>New patient? <a href="register.html">Register here</a></p>
+  </main>
+</body>
+</html>
