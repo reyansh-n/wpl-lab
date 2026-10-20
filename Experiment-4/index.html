@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lab - CityCare Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
 
+    <header>
+        <h1>CityCare Hospital</h1>
+        <p>Experiment 4: JavaScript &amp; Asynchronous Programming</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#task1">Task 1</a></li>
+            <li><a href="#task2">Task 2</a></li>
+            <li><a href="#task3">Task 3</a></li>
+            <li><a href="#task4">Task 4</a></li>
+            <li><a href="#task5">Task 5</a></li>
+            <li><a href="#task6">Task 6</a></li>
+            <li><a href="#task7">Task 7</a></li>
+        </ul>
+    </nav>
+
+    <main class="lab">
+
+        <section class="card" id="task1">
+            <h2>Task 1 - Patient Bill Calculator</h2>
+            <p class="hint">Charges are stored in an array. The total is calculated with reduce(), and a 10% discount applies if it exceeds Rs. 2000.</p>
+            <ul class="bill-list" id="billList"></ul>
+            <button class="btn" id="calcBill">Calculate Bill</button>
+            <div class="output-box" id="billOutput">Click "Calculate Bill" to see the total.</div>
+        </section>
+
+        <section class="card" id="task2">
+            <h2>Task 2 - Appointment Action Buttons</h2>
+            <p class="hint">Each button changes its own text using the <code>this</code> keyword when clicked.</p>
+            <div class="btn-row">
+                <button class="btn action-btn" data-label="Submit" data-done="Submitted!">Submit</button>
+                <button class="btn btn-danger action-btn" data-label="Cancel" data-done="Cancelled!">Cancel</button>
+                <button class="btn btn-secondary action-btn" data-label="Reset" data-done="Reset Done!">Reset</button>
+            </div>
+        </section>
+
+        <section class="card" id="task3">
+            <h2>Task 3 - Symptoms Description</h2>
+            <p class="hint">Describe your symptoms. The character count updates as you type.</p>
+            <div class="form-group">
+                <label for="symptoms">Symptoms:</label>
+                <textarea id="symptoms" rows="4" placeholder="Type here..."></textarea>
+            </div>
+            <p class="counter">Characters typed: <span id="charCount">0</span></p>
+        </section>
+
+        <section class="card" id="task4">
+            <h2>Task 4 - Patient Registration with Validation</h2>
+            <form id="regForm" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name">
+                    <span class="error-msg" id="fullNameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" maxlength="10" placeholder="10-digit mobile number">
+                    <span class="error-msg" id="mobileError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <span class="error-msg" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="At least 6 characters, with a letter and a number">
+                    <span class="error-msg" id="passwordError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Re-enter your password">
+                    <span class="error-msg" id="confirmPasswordError"></span>
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </div>
+                    <span class="error-msg" id="genderError"></span>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <p id="regStatus" style="margin-top:1rem;"></p>
+            </form>
+        </section>
+
+        <section class="card" id="task5">
+            <h2>Task 5 - Ward Meal Order (Nested Callbacks)</h2>
+            <p class="hint">Select Food &rarr; Confirm Order &rarr; Prepare Food &rarr; Assign Delivery Partner &rarr; Deliver Food, using nested callbacks.</p>
+            <button class="btn" id="mealBtn">Order Patient Meal</button>
+            <div class="output-box" id="mealOutput"></div>
+        </section>
+
+        <section class="card" id="task6">
+            <h2>Task 6 - Pharmacy Order (Promise Chaining)</h2>
+            <p class="hint">Select Product &rarr; Check Availability &rarr; Add to Cart &rarr; Make Payment &rarr; Order Confirmation. Every step returns a Promise. Pick "Vitamin D3" to see the out-of-stock error.</p>
+            <div class="form-group">
+                <label for="medicineSelect">Medicine:</label>
+                <select id="medicineSelect"></select>
+            </div>
+            <button class="btn" id="pharmacyBtn">Place Order</button>
+            <div class="output-box" id="pharmacyOutput"></div>
+        </section>
+
+        <section class="card" id="task7">
+            <h2>Task 7 - Doctor Appointment Booking (async/await)</h2>
+            <p class="hint">Select Doctor &rarr; Check Slot Availability &rarr; Reserve Slot &rarr; Make Payment &rarr; Generate Token. Payment fails about 20% of the time, so click again to see both outcomes.</p>
+            <button class="btn" id="bookBtn">Book Appointment - Dr. Amit Sharma</button>
+            <div class="output-box" id="bookOutput"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CityCare Hospital. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

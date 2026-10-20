@@ -1,0 +1,187 @@
+/* ===== Task 1: Basic page styling (global) ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+    background-color: #eef5f4;
+    color: #1f3a40;
+    line-height: 1.6;
+    text-align: left;
+    /* Task 6: sticky footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== Task 2: Header and footer ===== */
+header, footer {
+    background-color: #0f4c5c;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.6rem 1rem;
+}
+header h1 { font-size: 2.3rem; color: #ffffff; }
+header p  { color: #bfe3e0; }
+footer    { margin-top: auto; padding: 1.1rem 1rem; font-size: 0.9rem; }
+
+/* ===== Task 3: Horizontal navigation bar ===== */
+nav {
+    background-color: #0a3541;
+    padding: 0.6rem 1rem;
+    position: sticky;
+    top: 0;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+nav a {
+    color: #e6f4f2;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.25s ease-in-out;
+}
+nav a:hover  { background-color: #2ec4b6; color: #0a3541; transform: translateY(-2px); }
+nav a.active { background-color: #1b9aaa; color: #ffffff; }
+
+/* ===== Task 6: Consistent layout (common main margins) ===== */
+main {
+    flex: 1;
+    width: 92%;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* ===== Task 4: Card (border, radius, shadow, centered, background) ===== */
+.card {
+    width: 100%;
+    max-width: 620px;
+    background-color: #ffffff;
+    border: 1px solid #d3e4e2;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(15, 76, 92, 0.12);
+    padding: 2rem;
+    margin: 0 auto;
+}
+.card-wide { max-width: 980px; }
+.card h2 { color: #0f4c5c; margin-bottom: 0.4rem; }
+.card h3 { color: #0f4c5c; margin: 1.2rem 0 0.4rem; }
+
+/* ===== Task 5: Lists ===== */
+ol.custom-list {
+    list-style-type: upper-roman;      /* changed ordered-list style */
+    padding-left: 2rem;
+    margin: 0.5rem 0 1rem;
+}
+ol.custom-list li {
+    padding: 0.45rem 0.4rem;           /* spacing between items */
+    color: #0b7285;                    /* item colour */
+    font-weight: 600;
+    border-bottom: 1px dashed #cfe3e1;
+}
+ol.custom-list li:last-child { border-bottom: none; }
+
+dl.hospital-info {                     /* description list background */
+    background-color: #e0f4f1;
+    border-left: 5px solid #1b9aaa;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+}
+dl.hospital-info dt { font-weight: 700; color: #0f4c5c; margin-top: 0.5rem; }
+dl.hospital-info dt:first-child { margin-top: 0; }
+dl.hospital-info dd { margin-left: 0.8rem; }
+
+/* ===== Forms ===== */
+.form-group { margin-bottom: 1.1rem; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+.form-group input[type="text"], .form-group input[type="email"],
+.form-group input[type="tel"], .form-group input[type="password"],
+.form-group input[type="date"], .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    border: 1.5px solid #b8d3d0;
+    border-radius: 8px;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #1b9aaa;
+    box-shadow: 0 0 0 3px rgba(27, 154, 170, 0.25);
+}
+.radio-options { display: flex; gap: 18px; flex-wrap: wrap; }
+.radio-options label { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; }
+
+/* ===== Buttons + animation ===== */
+.btn { display: inline-block; padding: 11px 24px; border: none; border-radius: 8px;
+    background-color: #1b9aaa; color: #fff; font-size: 1rem; font-weight: 600;
+    text-decoration: none; cursor: pointer; transition: all 0.25s ease-in-out; }
+.btn:hover { background-color: #0b7285; transform: translateY(-2px); }
+.btn-primary { animation: pulse 2.4s infinite; }
+.btn-secondary { background-color: #6c8a90; }
+.form-buttons { display: flex; gap: 10px; }
+.form-buttons .btn { flex: 1; }
+.center { text-align: center; margin-top: 1.4rem; }
+.form-link { text-align: center; margin-top: 1rem; font-size: 0.92rem; }
+.form-link a { color: #0b7285; font-weight: 600; }
+
+@keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(27, 154, 170, 0.55); }
+    70%  { box-shadow: 0 0 0 14px rgba(27, 154, 170, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(27, 154, 170, 0); }
+}
+
+/* ===== Tables ===== */
+.table-responsive { width: 100%; overflow-x: auto; margin: 1rem 0; border: 1px solid #d3e4e2; border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; background-color: #fff; text-align: center; }
+th, td { padding: 12px 14px; border-bottom: 1px solid #d3e4e2; }
+th { background-color: #0f4c5c; color: #fff; }
+tr:nth-child(even) { background-color: #f3f9f8; }
+tr:hover td { background-color: #e3f1ef; }
+.day-col { font-weight: 700; background-color: #e0f4f1; }
+.lunch-break { background-color: #fff3cd !important; color: #8a5a00; font-weight: 700; letter-spacing: 1px; }
+.lab { background-color: #dff1f5; font-weight: 600; }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    header h1 { font-size: 1.7rem; }
+    nav ul { flex-direction: column; gap: 6px; }
+    nav a { display: block; text-align: center; }
+    .card { padding: 1.3rem; }
+    table { font-size: 0.82rem; }
+    th, td { padding: 9px 7px; }
+}
+
+/* ===== Experiment 4: JavaScript lab additions ===== */
+main.lab { flex-direction: column; align-items: center; gap: 1.6rem; }
+.lab .card { scroll-margin-top: 80px; }
+.lab .card > p.hint { margin-bottom: 1rem; color: #4a666b; }
+.bill-list { list-style: none; background: #e0f4f1; border-radius: 8px; padding: 0.6rem 1rem; margin-bottom: 1rem; }
+.bill-list li { display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px dashed #b8d3d0; }
+.bill-list li:last-child { border-bottom: none; }
+.output-box { background: #f4f9f8; border: 1px solid #d3e4e2; border-radius: 8px; padding: 0.9rem 1rem;
+    margin-top: 1rem; font-family: Consolas, 'Courier New', monospace; font-size: 0.9rem; min-height: 2.6rem; }
+.output-box p { margin: 0.25rem 0; }
+.output-box .error { color: #b3261e; font-weight: 700; }
+.output-box .success { color: #1b7f4c; font-weight: 700; }
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-danger { background-color: #c0392b; }
+.btn-danger:hover { background-color: #962d22; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; animation: none; transform: none; }
+.error-msg { display: block; color: #b3261e; font-size: 0.85rem; min-height: 1.1rem; margin-top: 0.25rem; }
+.input-error { border-color: #b3261e !important; }
+.counter { margin-top: 0.5rem; font-size: 0.92rem; }
+.counter span { font-weight: 700; color: #0b7285; }
+#regStatus.ok { color: #1b7f4c; font-weight: 700; }
+#regStatus.bad { color: #b3261e; font-weight: 700; }
