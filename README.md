@@ -12,5 +12,4 @@ Welcome to my Web Programming Lab (WPL) repository. This repository contains the
 | Experiment 4 | Experiment 4 | [Open Website](https://reyansh-n.github.io/wpl-lab/Experiment-4/) |
 
 
-
 Each experiment folder contains the HTML files required for its website.
